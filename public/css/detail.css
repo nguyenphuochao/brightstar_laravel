@@ -1,0 +1,47 @@
+.logo-desktop {
+    margin-top: -45px;
+    margin-bottom: -95px;
+    margin-left: 197px;
+}
+
+.logo-mobile {
+    margin: auto;
+}
+
+.detail.bg-blue {
+    background-color: #02225b !important;
+}
+
+.detail.bg-organge {
+    background-color: #E06200;
+}
+
+.detail nav ul li a {
+    color: white !important;
+    font-weight: bold;
+}
+
+nav ul li i {
+    font-size: 30px;
+}
+nav .nav-item .nav-link {
+    color: white !important;
+    text-transform: uppercase;
+}
+.detail .nav-item .nav-link:hover {
+    color: yellow !important;
+}
+
+.detail .nav-item .active {
+    color: yellow !important;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #02225B;
+
+}
+
+.nav-item.dropdown .dropdown-item:hover {
+    color: black !important;
+}
