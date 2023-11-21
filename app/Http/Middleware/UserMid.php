@@ -18,7 +18,7 @@ class UserMid
     public function handle(Request $request, Closure $next)
     {
         if (!Auth::check())
-            return redirect()->route('admin.login');
+            return redirect()->route('category.login');
         return $next($request);
     }
 }

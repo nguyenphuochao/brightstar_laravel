@@ -2,14 +2,36 @@
 <html lang="en">
 
 <head>
-    <title>Bright Star</title>
+    <title>Công ty cổ phần truyền thông Brightstar</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:image" content="{{ asset('') }}img/logo.png">
+    <!-- Thêm đoạn mã JSON-LD dưới đây -->
+    <script type="application/ld+json">
+        {
+            "@context":"https://schema.org",
+            "@type":"WebSite",
+            "name":"Công ty cổ phần truyền thông Brightstar",
+            "alternateName":"Công ty cổ phần truyền thông Brightstar",
+            "url":"https://brightstar.vn/",
+            "description" : "Chuyên quảng cáo truyền hình, internet, sản xuất phim, sitcom, sự kiện, bản quyền",
+            "sameAs": [
+                "https://www.facebook.com/tieuthuyetweb",
+                "https://www.instagram.com/tanvo1999/",
+                "https://www.linkedin.com/in/minh-tan-vo-a402ba196/",
+                "https://twitter.com/TanVo1999",
+                "https://www.pinterest.com/tieuthuyetmanager/_saved/"
+            ]
+        }
+    </script>
+    <meta name="description" content="Chuyên quảng cáo truyền hình, internet, sản xuất phim, sitcom, sự kiện, bản quyền">
+    <meta property="og:site_name" content="Công ty cổ phần truyền thông Brightstar" />
+    <meta property="og:title" content="Công ty cổ phần truyền thông Brightstar">
+    <meta property="og:description" content="Chuyên quảng cáo truyền hình, internet, sản xuất phim, sitcom, sự kiện, bản quyền">
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="600">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1024">
-    <meta property="og:image:height" content="1024">
+    <meta property="og:image" content="{{ asset('') }}img/logo.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -34,9 +56,9 @@
                 <span class="navbar-toggler-icon bg-white"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav mr-auto ml-5 mt-2 mt-lg-0 w-100 justify-content-between">
+                <ul class="navbar-nav mr-auto pl-3 ml-0 mt-0 mt-lg-0 w-100 justify-content-between">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-house" ></i><span
+                        <a class="nav-link" href="#"><i class="fa-solid fa-house"></i><span
                                 class="sr-only">(current)</span></a>
                     </li>
                     @foreach ($categories as $category)

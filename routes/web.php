@@ -3,7 +3,7 @@
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\SliderController as BackendSliderController;
-use App\Http\Controllers\frontend\HomeController;
+use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 
