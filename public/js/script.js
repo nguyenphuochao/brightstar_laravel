@@ -1,9 +1,8 @@
-
-
-// Client
-
-// Admin
 $(document).ready(function () {
+    // Client
+    $(".detail_content_img img").addClass('img-fluid');
+    $(".detail_content_img img").css('height','auto');
+    // Admin
     $("#table_category").on('click', '#button_modal', function (e) {
         e.preventDefault();
         var id = $(this).val();

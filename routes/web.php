@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\ImageController;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\SliderController as BackendSliderController;
 use App\Http\Controllers\Frontend\HomeController;
@@ -32,6 +33,8 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth_user'], function ()
     Route::post('add/category_child',[CategoryController::class,'add_category_child'])->name('category.add_category_child');
     // Slider CRUD
     Route::resource('slider', BackendSliderController::class);
+    // Image CRUD
+    Route::resource('image', ImageController::class);
 });
 Route::get('pass', function () {
     echo bcrypt(123);
@@ -40,4 +43,7 @@ Route::get('/clear-config-cache', function () {
     $exitCode = Artisan::call('config:cache');
 
     return "Config cache cleared successfully.";
+});
+Route::get('version-php',function(){
+    echo phpversion();
 });

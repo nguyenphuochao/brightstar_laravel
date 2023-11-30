@@ -81,7 +81,7 @@
             </div>
         </nav>
     </div>
-    <div class="container">
+    <div class="container detail_content_img">
         {!! $category_item->content !!}
     </div>
     <!-- Optional JavaScript -->

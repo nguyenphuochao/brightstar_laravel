@@ -65,6 +65,10 @@
                             <div class="sb-nav-link-icon"><i class="fa-regular fa-image"></i></div>
                             Slider quảng cáo
                         </a>
+                        <a class="nav-link" href="{{ route('image.index') }}">
+                            <div class="sb-nav-link-icon"><i class="fa-regular fa-file-image"></i></div>
+                            Upload hình
+                        </a>
 
                     </div>
                 </div>
@@ -108,7 +112,6 @@
     <script src="{{ asset('') }}ckeditor/ckeditor.js"></script>
     <script src="{{ asset('') }}ckfinder/ckfinder.js"></script>
     <script src="{{asset('')}}js/script.js"></script>
-
 </body>
 
 </html>

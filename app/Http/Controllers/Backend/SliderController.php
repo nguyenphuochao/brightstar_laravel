@@ -51,7 +51,7 @@ class SliderController extends Controller
         $slider->user_id = Auth::user()->id;
         $slider->name = $request->input('name');
         $file = $request->file('image');
-        $file->move(base_path('\public\img'), $file->getClientOriginalName());
+        $file->move(public_path('img'), $file->getClientOriginalName());
         $slider->image = $request->file('image')->getClientOriginalName();
         $slider->date_start = date('Y-m-d H:i:s');
         $slider->save();
@@ -106,7 +106,7 @@ class SliderController extends Controller
         // Xử lí ảnh
         if ($request->file('image')) {
             $file = $request->file('image');
-            $file->move(base_path('\public\img'), $file->getClientOriginalName());
+            $file->move(public_path('img'), $file->getClientOriginalName());
             $slider->image = $request->file('image')->getClientOriginalName();
         }
         $request->session()->put("success", "Sửa thành công {$slider->name}");
