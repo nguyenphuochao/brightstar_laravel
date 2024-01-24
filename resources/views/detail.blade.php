@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>{{ $category_item->name }}</title>
+    <title>Công ty cổ phần truyền thông BrightStar | {{ $category_item->name }}</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,7 +31,9 @@
     <meta property="og:image:width" content="1080">
     <meta property="og:image:height" content="600">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:image" content="{{ asset('') }}img/logo.png">
+    <meta property="og:image" content="{{ asset('') }}img/dich-vu-1.png">
+     {{-- Favicon --}}
+     <link rel="shortcut icon" href="{{ asset('') }}img/favicon.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">

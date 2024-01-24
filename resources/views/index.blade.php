@@ -32,6 +32,8 @@
     <meta property="og:image:height" content="600">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image" content="{{ asset('') }}img/logo.png">
+    {{-- Favicon --}}
+    <link rel="shortcut icon" href="{{ asset('') }}img/favicon.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -64,13 +66,13 @@
                     @foreach ($categories as $category)
                         @if ($category->parent_id == 0)
                             <li class="nav-item @if (count($category->children) > 0) {{ 'dropdown' }} @endif">
-                                <a class="nav-link @if (count($category->children) > 0) {{ 'dropdown-toggle' }} @endif"
+                                <a target="_blank" class="nav-link @if (count($category->children) > 0) {{ 'dropdown-toggle' }} @endif"
                                     href="{{ route('show', ['slug' => $category->alias]) }}">{{ $category->name }}
                                 </a>
                                 @if (count($category->children) > 0)
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         @foreach ($category->children as $child)
-                                            <a class="dropdown-item"
+                                            <a target="_blank" class="dropdown-item"
                                                 href="{{ route('show', ['slug' => $child->alias]) }}"><i
                                                     class="fa-solid fa-caret-right" style="font-size: 20px;"></i>
                                                 {{ $child->name }}</a>
@@ -99,35 +101,35 @@
                 <img class="img-responsive" src="img/tivi_table.png" alt="" width="380px">
             </div>
             <div class="col-6 col-sm-6 col-md-6" id="quangcao">
-                <a href="{{ $currentUrl }}/danh-muc/dich-vu"><img src="img/quangcao.png" alt=""
+                <a target="_blank" href="{{ $currentUrl }}/danh-muc/dich-vu"><img src="img/quangcao.png" alt=""
                         class="item">
                     <h2>DỊCH VỤ</h2>
                 </a>
             </div>
             <div class="col-6 col-sm-6 col-md-6" id="tmdt">
-                <a href="{{ $currentUrl }}/danh-muc/TMĐT"><img src="img/tmdt.png" alt="" class="item">
+                <a target="_blank" href="{{ $currentUrl }}/danh-muc/TMĐT"><img src="img/tmdt.png" alt="" class="item">
                     <h2>TMĐT</h2>
                 </a>
             </div>
             <div class="col-6 col-sm-6 col-md-6" id="sanxuatphim">
-                <a href="{{ $currentUrl }}/danh-muc/san-xuat-phim"><img src="img/sanxuatphim.png" alt=""
+                <a target="_blank" href="{{ $currentUrl }}/danh-muc/san-xuat-phim"><img src="img/sanxuatphim.png" alt=""
                         class="item">
                     <h2>SẢN XUẤT PHIM</h2>
                 </a>
             </div>
             <div class="col-6 col-sm-6 col-md-6" id="ttdt">
-                <a href="{{ $currentUrl }}/danh-muc/T.TTĐT"><img src="img/TTDT.png" alt="" class="item">
+                <a target="_blank" href="{{ $currentUrl }}/danh-muc/T.TTĐT"><img src="img/TTDT.png" alt="" class="item">
                     <h2>T.TTĐT</h2>
                 </a>
             </div>
             <div class="col-6 col-sm-6 col-md-6" id="banquyen">
-                <a href="{{ $currentUrl }}/danh-muc/ban-quyen"><img src="img/banquyen.png" alt=""
+                <a target="_blank" href="{{ $currentUrl }}/danh-muc/ban-quyen"><img src="img/banquyen.png" alt=""
                         class="item">
                     <h2>BẢN QUYỀN</h2>
                 </a>
             </div>
             <div class="col-6 col-sm-6 col-md-6" id="sukien">
-                <a href="{{ $currentUrl }}/danh-muc/su-kien"><img src="img/sukien.png"
+                <a target="_blank" href="{{ $currentUrl }}/danh-muc/su-kien"><img src="img/sukien.png"
                         style="max-width: 300px;height: 148px;" alt="" class="item">
                     <h2>SỰ KIỆN</h2>
                 </a>
