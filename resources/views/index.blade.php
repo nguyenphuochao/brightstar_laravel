@@ -6,28 +6,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Thêm đoạn mã JSON-LD dưới đây -->
-    <script type="application/ld+json">
-        {
-            "@context":"https://schema.org",
-            "@type":"WebSite",
-            "name":"Công ty cổ phần truyền thông Brightstar",
-            "alternateName":"Công ty cổ phần truyền thông Brightstar",
-            "url":"https://brightstar.vn/",
-            "description" : "Chuyên quảng cáo truyền hình, internet, sản xuất phim, sitcom, sự kiện, bản quyền",
-            "sameAs": [
-                "https://www.facebook.com/tieuthuyetweb",
-                "https://www.instagram.com/tanvo1999/",
-                "https://www.linkedin.com/in/minh-tan-vo-a402ba196/",
-                "https://twitter.com/TanVo1999",
-                "https://www.pinterest.com/tieuthuyetmanager/_saved/"
-            ]
-        }
-    </script>
     <meta name="description" content="Chuyên quảng cáo truyền hình, internet, sản xuất phim, sitcom, sự kiện, bản quyền">
     <meta property="og:site_name" content="Công ty cổ phần truyền thông Brightstar" />
     <meta property="og:title" content="Công ty cổ phần truyền thông Brightstar">
-    <meta property="og:description" content="Chuyên quảng cáo truyền hình, internet, sản xuất phim, sitcom, sự kiện, bản quyền">
+    <meta property="og:description"
+        content="Chuyên quảng cáo truyền hình, internet, sản xuất phim, sitcom, sự kiện, bản quyền">
     <meta property="og:image:width" content="1080">
     <meta property="og:image:height" content="600">
     <meta property="og:image:type" content="image/png">
@@ -42,11 +25,26 @@
     <link rel="stylesheet" href="{{ asset('') }}owl/owl.carousel.min.css">
     <link rel="stylesheet" href="{{ asset('') }}owl/owl.theme.default.min.css">
     <link rel="stylesheet" href="{{ asset('') }}css/style.css">
+    <style>
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Màu làm mờ và độ trong suốt */
+            z-index: 999;
+            /* Đặt lớp z-index cao hơn để hiển thị trên modal */
+        }
+    </style>
 </head>
 
 <body>
     <div class="logo-desktop d-none d-md-block bg-light">
-        <div class="container"><a href="/"><img src="{{ asset('') }}img/logo.png" alt="" width="310px" height="265px"></a></div>
+        <div class="container"><a href="/"><img src="{{ asset('') }}img/logo.png" alt=""
+                    width="310px" height="265px"></a></div>
     </div>
     <div class="home mb-3" style="background-color: #E06200;">
         <nav class="navbar navbar-expand-md navbar-light container p-0">
@@ -66,7 +64,8 @@
                     @foreach ($categories as $category)
                         @if ($category->parent_id == 0)
                             <li class="nav-item @if (count($category->children) > 0) {{ 'dropdown' }} @endif">
-                                <a target="_blank" class="nav-link @if (count($category->children) > 0) {{ 'dropdown-toggle' }} @endif"
+                                <a target="_blank"
+                                    class="nav-link @if (count($category->children) > 0) {{ 'dropdown-toggle' }} @endif"
                                     href="{{ route('show', ['slug' => $category->alias]) }}">{{ $category->name }}
                                 </a>
                                 @if (count($category->children) > 0)
@@ -101,30 +100,32 @@
                 <img class="img-responsive" src="img/tivi_table.png" alt="" width="380px">
             </div>
             <div class="col-6 col-sm-6 col-md-6" id="quangcao">
-                <a target="_blank" href="{{ $currentUrl }}/danh-muc/dich-vu"><img src="img/quangcao.png" alt=""
-                        class="item">
+                <a target="_blank" href="{{ $currentUrl }}/danh-muc/dich-vu"><img src="img/quangcao.png"
+                        alt="" class="item">
                     <h2>DỊCH VỤ</h2>
                 </a>
             </div>
             <div class="col-6 col-sm-6 col-md-6" id="tmdt">
-                <a target="_blank" href="{{ $currentUrl }}/danh-muc/TMĐT"><img src="img/tmdt.png" alt="" class="item">
+                <a target="_blank" href="{{ $currentUrl }}/danh-muc/TMĐT"><img src="img/tmdt.png" alt=""
+                        class="item">
                     <h2>TMĐT</h2>
                 </a>
             </div>
             <div class="col-6 col-sm-6 col-md-6" id="sanxuatphim">
-                <a target="_blank" href="{{ $currentUrl }}/danh-muc/san-xuat-phim"><img src="img/sanxuatphim.png" alt=""
-                        class="item">
+                <a target="_blank" href="{{ $currentUrl }}/danh-muc/san-xuat-phim"><img src="img/sanxuatphim.png"
+                        alt="" class="item">
                     <h2>SẢN XUẤT PHIM</h2>
                 </a>
             </div>
             <div class="col-6 col-sm-6 col-md-6" id="ttdt">
-                <a target="_blank" href="{{ $currentUrl }}/danh-muc/T.TTĐT"><img src="img/TTDT.png" alt="" class="item">
+                <a target="_blank" href="{{ $currentUrl }}/danh-muc/T.TTĐT"><img src="img/TTDT.png"
+                        alt="" class="item">
                     <h2>T.TTĐT</h2>
                 </a>
             </div>
             <div class="col-6 col-sm-6 col-md-6" id="banquyen">
-                <a target="_blank" href="{{ $currentUrl }}/danh-muc/ban-quyen"><img src="img/banquyen.png" alt=""
-                        class="item">
+                <a target="_blank" href="{{ $currentUrl }}/danh-muc/ban-quyen"><img src="img/banquyen.png"
+                        alt="" class="item">
                     <h2>BẢN QUYỀN</h2>
                 </a>
             </div>
@@ -135,7 +136,22 @@
                 </a>
             </div>
         </div>
-
+        <!-- Modal thông báo nghỉ tết-->
+        <div class="overlay" id="overlay"></div>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span
+                            style="position: absolute;font-size: 60px;right: 5px;top:-18px;color:black;border-radius: 50%;font-weight: bolder"
+                            aria-hidden="true">&times;</span>
+                    </button>
+                    <img style="width: 100%" src="https://brightstar.vn/uploads/images/lich-nghi-tet-brightstar.jpg"
+                        alt="">
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Optional JavaScript -->
@@ -173,7 +189,17 @@
                 loop: true,
                 autoplayTimeout: 2000,
             });
+            // Hiện popup lịch nghỉ tết
+            $("#exampleModalCenter").modal('show');
+            // Hiển thị overlay khi modal được hiển thị
+            $('#exampleModalCenter').on('shown.bs.modal', function() {
+                $('#overlay').show();
+            });
 
+            // Ẩn overlay khi modal được ẩn
+            $('#exampleModalCenter').on('hidden.bs.modal', function() {
+                $('#overlay').hide();
+            });
         });
     </script>
 </body>

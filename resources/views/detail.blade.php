@@ -27,13 +27,14 @@
     <meta name="description" content="Chuyên quảng cáo truyền hình, internet, sản xuất phim, sitcom, sự kiện, bản quyền">
     <meta property="og:site_name" content="Công ty cổ phần truyền thông Brightstar" />
     <meta property="og:title" content="Công ty cổ phần truyền thông Brightstar">
-    <meta property="og:description" content="Chuyên quảng cáo truyền hình, internet, sản xuất phim, sitcom, sự kiện, bản quyền">
+    <meta property="og:description"
+        content="Chuyên quảng cáo truyền hình, internet, sản xuất phim, sitcom, sự kiện, bản quyền">
     <meta property="og:image:width" content="1080">
     <meta property="og:image:height" content="600">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image" content="{{ asset('') }}img/dich-vu-1.png">
-     {{-- Favicon --}}
-     <link rel="shortcut icon" href="{{ asset('') }}img/favicon.png" type="image/x-icon">
+    {{-- Favicon --}}
+    <link rel="shortcut icon" href="{{ asset('') }}img/favicon.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
